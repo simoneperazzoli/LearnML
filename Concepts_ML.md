@@ -39,23 +39,34 @@
 ### 2) Model performance	
 
 **Split dataset**: 
-	- Training + validation (cross-validation), and test set 
-		- Cross validation: 
-			A methodology for tuning hyperparameters without overfitting.
-			 Divide the dataset into 3 partitions: training, validation and test. Use the training data for learning parameters and evaluate the hyperparameters using the validation set. Use the test set at very last only once as it would represent general data.
-	- Challenges:
-		*a) Pacient overlap*: in medical data is a part of a more general problem in machine learning called data leakage
-		*b) Set sampling*: 
-			- When we're randomly sampling a test set of hundreds of examples from the dataset, we might not sample any patients that actually have a disease, for example. 
-			- Solution: get a sample a test set with at least X% of examples of our minority class. One common choice of X is 50%. This ensures that the study will have sufficient numbers to get a good estimate of the performance of the model both on positive and on negative examples. 
-			- For validation set, the same sampling strategy is used. Considering test and validation set have been artificially sampled to have a large fraction of positive examples, the training set will have a much smaller fraction of positive examples, indicating presence of imbalance data. 
-		*c) Ground truth (right label)/Reference Standard*:
-			- Consensus voting method
-			e.g.: imagine a group of human experts to determine the ground truth. 
+
+- Training + validation (cross-validation), and test set 
+	
+- Cross validation: 
+	A methodology for tuning hyperparameters without overfitting.
+	Divide the dataset into 3 partitions: training, validation and test. Use the training data for learning parameters and evaluate the hyperparameters using the validation set. Use the test set at very last only once as it would represent general data.
+
+- Challenges:
+	*a) Pacient overlap*: in medical data is a part of a more general problem in machine learning called data leakage
+
+	*b) Set sampling*: 
+			
+		- When we're randomly sampling a test set of hundreds of examples from the dataset, we might not sample any patients that actually have a disease, for example. 
+			
+		- Solution: get a sample a test set with at least X% of examples of our minority class. One common choice of X is 50%. This ensures that the study will have sufficient numbers to get a good estimate of the performance of the model both on positive and on negative examples. 
+			
+		- For validation set, the same sampling strategy is used. Considering test and validation set have been artificially sampled to have a large fraction of positive examples, the training set will have a much smaller fraction of positive examples, indicating presence of imbalance data. 
+	
+	*c) Ground truth (right label)/Reference Standard*:
+		
+		- Consensus voting method
+		e.g.: imagine a group of human experts to determine the ground truth. 
 			In one setting, we can have three radiologists look at a chest X-ray and each determine whether there is pneumonia present or not. If two out of the three say, yes, then we would say the answer is yes. In general, the answer will be the majority vote of the three radiologists. Alternatively, we can have the three radiologists get into a room and discuss their interpretation until they reach a single decision, which can then be used as the ground truth. 
-			- More definitive test: provides additional information to set the ground truth, such as CT scan to confirm X-ray results.
+			
+		- More definitive test: provides additional information to set the ground truth, such as CT scan to confirm X-ray results.
 
 ### 3) Evaluation Metrics:
+
 **Accuracy**: 
 	- ratio of number of correct predictions to the total number of input samples. 
 	- in terms of conditional probability: a probability of predictions being correct
@@ -64,28 +75,44 @@
 	- measures how well the model predicts actual positive cases as positive
 	- e.g.: probability that the model classifies a patient as having the disease given that they have the disease.
 
-**Specificity (true negative rate)**: measures the proportion of actual negatives that are correctly identified 
-				e.g: the probability that the model classifies a patient as being normal given that they are normal. 
+**Specificity (true negative rate)**: 
+	- measures the proportion of actual negatives that are correctly identified 
+	- e.g: the probability that the model classifies a patient as being normal given that they are normal. 
 
-**Prevalence**: how many actual positives there are in the population
-				e.g: the probability of a patient having disease in a population
+**Prevalence**: 
+	- measures how many actual positives there are in the population
+	- e.g: the probability of a patient having disease in a population
 	
-**PPV (positive predictive value)**: probability that following a positive test result, that individual will truly have that specific disease
+**PPV (positive predictive value)**: 
+	- probability that following a positive test result, that individual will truly have that specific disease
 
-**NVP (negative predictive value)**: probability that following a negative test result, that individual will truly not have that specific disease
+**NVP (negative predictive value)**: 
+	- probability that following a negative test result, that individual will truly not have that specific disease
 
 **Confusion matrix**:
+
 **ROC curve**:
+
 **Threshold**:
+
 **Sampling population**:
+
 **Confidence interval**: 
+
 **Underfitting:**
+
 **Overfitting:**
+
 **ROC:**
+
 **F1-score:**
+
 **Recall:**
+
 **Mattews correlation coefficient (MCC):** 
+
 **kappa coefficient:**
+
 **Test ks (Kolmogorov–Smirnov):**
 
 
