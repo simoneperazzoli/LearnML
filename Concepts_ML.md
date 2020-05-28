@@ -3,15 +3,20 @@
 ### 1) Handling with class imbalance and small datasets
 
 **Loss function**: 
-	- Measures the error between our output probability and the desired label
-	
-	- Binary cross-entropy loss: measures the performance of a classification model whose output is between zero and one 
+
+- Measures the error between our output probability and the desired label
+
+- Binary cross-entropy loss: measures the performance of a classification model whose output is between zero and one 
 
 **Class imbalance**: 
-	- Occurs when we do not have an equal number of examples of non-disease and disease in medical datasets, for example.
-	- Weighted loss: modify the loss function, to weight the normal and the mass classes differently
-	- Resampling data: to have an equal number of data (positive and negative samples)
-		Aproaches: under-sampling (class with more examples) or oversampling (class with less examples),
+
+- Occurs when we do not have an equal number of examples of non-disease and disease in medical datasets, for example.
+
+- Weighted loss: modify the loss function, to weight the normal and the mass classes differently
+
+- Resampling data: to have an equal number of data (positive and negative samples)
+
+- Aproaches for resampling: under-sampling (class with more examples) or oversampling (class with less examples),
 
 
 **Multi-task learning**: 
