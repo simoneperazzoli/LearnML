@@ -4,6 +4,7 @@
 
 **Loss function**: 
 	- Measures the error between our output probability and the desired label
+	
 	- Binary cross-entropy loss: measures the performance of a classification model whose output is between zero and one 
 
 **Class imbalance**: 
