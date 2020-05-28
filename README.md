@@ -1,3 +1,3 @@
 ## LearnML
 
-This repository contains ML benchmark cases from Kaggl
+This repository contains ML benchmark cases from Kaggle
