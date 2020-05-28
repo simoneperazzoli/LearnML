@@ -46,7 +46,9 @@ Architecture choice:
 - e.g.: When we fine-tune the network on chest X-rays,instead of fine-tuning all features we've transferred, we can freeze the features learned by the shallow layers and just fine-tune the deeper layers. 
 
 - Design choices: 
+
 	a) fine-tune all of the layers;
+	
 	b) only fine-tune the later or the last layer and not fine-tune the earlier layers.
 
 **Data augmentation**: 
@@ -68,7 +70,11 @@ Divide the dataset into 3 partitions: training, validation and test. Use the tra
 
 - Challenges:
 
-*a) Pacient overlap*: in medical data is a part of a more general problem in machine learning called data leakage
+*a) Pacient overlap*: 
+
+- Term for medical data;  
+
+- It is part of a more general problem in ML called data leakage
 
 *b) Set sampling*: 
 			
